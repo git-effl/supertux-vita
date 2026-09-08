@@ -27,7 +27,7 @@ cd supertux-vita
 >[!CAUTION]
 >Make sure you have Boost at /external/boost/,the patch for Squirrel at external/squirrel/include and the patch for tinygettext at external/tinygettext/include/tinygettext,deleted VERSION from /external/findlocale and cloned the submodules,otherwise this won't work!!
 
-3. Run ```bash make -j4``` (This uses traditional makefiles,not cmake.)
+3. Run ```make -j4``` (This uses traditional makefiles,not cmake.)
 
 4. You're done!
 
