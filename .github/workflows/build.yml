@@ -1,0 +1,47 @@
+name: Build PS Vita VPK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: vitasdk/vitastd:latest
+
+    steps:
+      - name: Checkout repository with submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Patches and Dependencies
+        run: |
+          echo "Creating dependency directories..."
+          mkdir -p external/tinygettext/include/tinygettext
+          mkdir -p external/squirrel/include
+          mkdir -p external/boost
+
+          echo "Cloning tinygettext patch..."
+          git clone --depth 1 https://github.com/git-effl/st-tinygettext-patch /tmp/tinygettext-patch
+          cp -r /tmp/tinygettext-patch/* external/tinygettext/include/tinygettext/
+
+          echo "Cloning Squirrel patch..."
+          git clone --depth 1 https://github.com/git-effl/st-squirrel-patch /tmp/squirrel-patch
+          cp -r /tmp/squirrel-patch/* external/squirrel/include/
+
+          echo "Downloading Boost headers..."
+          wget -qO /tmp/boost.tar.gz https://boostorg.jfrog.io/artifactory/main/release/1.82.0/source/boost_1_82_0.tar.gz
+          tar -xzf /tmp/boost.tar.gz -C /tmp
+          mv /tmp/boost_1_82_0/boost external/boost/
+
+          echo "Removing findlocale VERSION file..."
+          rm -f external/findlocale/VERSION
+
+      - name: Build Project
+        run: make -j$(nproc)
+
+      - name: Upload VPK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: supertux-vita
+          path: supertux-vita.vpk
