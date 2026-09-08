@@ -4,6 +4,7 @@
 [submodule "external/squirrel"]
 	path = external/squirrel
 	url = https://github.com/SuperTux/squirrel.git
+	branch = version3_1
 [submodule "translations"]
 	path = translations
 	url = https://github.com/SuperTux/translations.git
