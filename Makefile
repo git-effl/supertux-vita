@@ -207,7 +207,7 @@ $(VPK_OUTPUT): $(EBOOT_PATH)
 
 # Clean
 clean:
-	@rm -rf $(BUILD_DIR) $(OUTPUT) $(VPK_OUTPUT)
+	@rm -rf $(BUILD_DIR) $(OUTPUT) 
 	@echo "Cleaned"
 
 # Help
