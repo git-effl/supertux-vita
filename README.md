@@ -7,7 +7,7 @@ A PSVita port of SuperTux,version 0.40.
 # Building
 
 Requirements:
-- WSL or MSYS2,though WSL is reccomended.
+- WSL or MSYS2,though WSL is recommended.
 - VitaSDK
 - Git
 - The [tinygettext patch](https://github.com/git-effl/st-tinygettext-patch) and the [Squirrel patch](https://github.com/git-effl/st-squirrel-patch) (Place the tinygettext one at external/tinygettext/include/tinygettext and the Squirrel one at external/squirrel/include)
@@ -43,8 +43,8 @@ cd supertux-vita
 
 # Quick note
 
-LLM's also worked on this project (especially on Makefiles),even though they helped,
-this does not mean its fully AI generated,an actual human being (maybe even more) worked on,created,built,and tested all of this!
+LLMs also worked on this project (especially on Makefiles),even though they helped,
+this does not mean it's fully AI generated,an actual human being (maybe even more) worked on,created,built,and tested all of this!
 
 # Licensing 
 
@@ -53,7 +53,7 @@ Some images like this one
  <img src="https://github.com/git-effl/supertux-vita/blob/master/sce_sys/livearea/contents/bg0.png">
 </p>
 
-we're made by the Supertux Team,they are licensed under CC-BY-SA 3.0,check SupertuxArtwork.txt for more details.
+were made by the Supertux Team,they are licensed under CC-BY-SA 3.0,check SupertuxArtwork.txt for more details.
 
 
 
