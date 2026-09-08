@@ -13,6 +13,7 @@ Requirements:
 - The [tinygettext patch](https://github.com/git-effl/st-tinygettext-patch) and the [Squirrel patch](https://github.com/git-effl/st-squirrel-patch) (Place the tinygettext one at external/tinygettext/include/tinygettext and the Squirrel one at external/squirrel/include)
 - Boost (place it on /external/boost/)
 - SuperTux's submodules
+- the file "VERSION" at external/findlocale deleted.
 
 1. Clone the repo, using:
 ```bash
@@ -23,9 +24,8 @@ git clone --recursive https://github.com/git-effl/supertux-vita.git
 ```bash
 cd supertux-vita
 ```
-
 >[!CAUTION]
->Make sure you have Boost at /external/boost/, the patch for Squirrel at external/squirrel/include and the patch for tinygettext at external/tinygettext/include/tinygettext and cloned the submodules,otherwise this won't work!!
+>Make sure you have Boost at /external/boost/, the patch for Squirrel at external/squirrel/include and the patch for tinygettext at external/tinygettext/include/tinygettext,deleted VERSION from external/findlocale and cloned the submodules,otherwise this won't work!!
 
 3. Run make (This uses traditional makefiles,not cmake.)
 
