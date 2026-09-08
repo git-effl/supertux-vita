@@ -10,6 +10,7 @@ Requirements:
 WSL or MSYS2,though WSL is reccomended.
 VitaSDK
 Git
+The [tinygettext patch](https://github.com/git-effl/st-tinygettext-patch) and the [Squirrel patch](https://github.com/git-effl/st-tinygettext-patch) (Place the tinygettext one at external/tinygettext/include/tinygettext and the Squirrel one at external/squirrel/include)
 Boost (place it on /external/boost/)
 SuperTux's submodules
 
