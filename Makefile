@@ -42,7 +42,6 @@ CFLAGS = -O2 -g \
   -fno-strict-aliasing \
   -DVITA \
   -D_GNU_SOURCE \
-  -DBOOST_HAS_LONG_LONG \
   -Iexternal \
   -Iexternal/boost \
   -I$(SRC_DIR) \
