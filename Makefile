@@ -27,6 +27,8 @@ VELF_PATH = $(BUILD_DIR)/supertux.velf
 EBOOT_PATH = $(BUILD_DIR)/eboot.bin
 OUTPUT = supertux-vita.elf
 VPK_OUTPUT = supertux-vita.vpk
+APP_VERSION = 0.40
+SFO_PATH = sce_sys/param.sfo
 
 # Compiler flags
 CFLAGS = -O2 -g \
@@ -191,7 +193,7 @@ $(VPK_OUTPUT): $(EBOOT_PATH)
 	fi
 	@if [ ! -f "sce_sys/param.sfo" ]; then \
 		echo "Generating default sce_sys/param.sfo..."; \
-		$(SFO) -s TITLE_ID="STUX00040" "SuperTux" sce_sys/param.sfo; \
+		$(SFO) -s TITLE_ID="STUX00040" APP_VER="$(APP_VERSION)" "SuperTux" sce_sys/param.sfo; \
 	fi
 	@CMD="$(PACK) $@ --sfo sce_sys/param.sfo --eboot $(EBOOT_PATH)"; \
 	if [ -f "sce_sys/icon0.png" ]; then CMD="$$CMD --add sce_sys/icon0.png=sce_sys/icon0.png"; fi; \
@@ -207,7 +209,7 @@ $(VPK_OUTPUT): $(EBOOT_PATH)
 
 # Clean
 clean:
-	@rm -rf $(BUILD_DIR) $(OUTPUT) 
+	@rm -rf $(BUILD_DIR) $(OUTPUT) $(SFO_PATH)
 	@echo "Cleaned"
 
 # Help
