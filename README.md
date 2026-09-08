@@ -2,7 +2,7 @@
  <img src="https://github.com/git-effl/supertux-vita/blob/master/data/images/engine/menu/logo.png">
 </p>
 
-A PSVita port of SuperTux,version 0.40.
+                                              A PSVita port of SuperTux,version 0.40.
 
 # Building
 
