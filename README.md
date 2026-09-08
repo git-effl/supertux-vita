@@ -25,7 +25,7 @@ git clone --recursive https://github.com/git-effl/supertux-vita.git
 cd supertux-vita
 ```
 >[!CAUTION]
->Make sure you have Boost at /external/boost/, the patch for Squirrel at external/squirrel/include and the patch for tinygettext at external/tinygettext/include/tinygettext,deleted VERSION from external/findlocale and cloned the submodules,otherwise this won't work!!
+>Make sure you have Boost at /external/boost/,the patch for Squirrel at external/squirrel/include and the patch for tinygettext at external/tinygettext/include/tinygettext,deleted VERSION from external/findlocale and cloned the submodules,otherwise this won't work!!
 
 3. Run make (This uses traditional makefiles,not cmake.)
 
