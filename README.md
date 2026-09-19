@@ -44,7 +44,7 @@ cd supertux-vita
 # Quick note
 
 LLMs also worked on this project (especially on Makefiles),even though they helped,
-this does not mean it's fully AI generated,an actual human being (maybe even more) worked on,created,built,and tested all of this!
+this does not mean it's fully AI generated,an actual human being (maybe even more on the original pc version) worked on,created,built,and tested all of this!
 
 # Licensing 
 
