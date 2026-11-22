@@ -30,7 +30,7 @@ jobs:
           cp -r /tmp/squirrel-patch/* external/squirrel/include/
 
           echo "Downloading Boost headers..."
-          wget -qO /tmp/boost.tar.gz https://sourceforge.net/projects/boost/files/boost/1.82.0/boost_1_82_0.tar.gz/download
+          wget -qO /tmp/boost.tar.gz https://archives.boost.io/release/1.92.0/source/boost_1_92_0.tar.gz
           tar -xzf /tmp/boost.tar.gz -C /tmp
           mv /tmp/boost_1_82_0/boost external/boost/
 
